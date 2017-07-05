@@ -1,44 +1,61 @@
 {
-  "name": "react-html-parser",
-  "version": "1.0.3",
-  "description": "Parse HTML into React components",
-  "main": "lib/index.js",
-  "jsnext:main": "src/index.js",
-  "scripts": {
-    "clean": "rimraf coverage dist lib",
-    "check": "npm run lint && npm run test",
-    "test": "karma start --single-run",
-    "test:watch": "karma start",
-    "lint": "eslint src test demo/src",
-    "build": "npm run build:lib && npm run build:umd && npm run build:umd:min",
-    "build:lib": "rimraf lib && babel ./src -d lib",
-    "build:umd": "webpack src/index.js dist/react-html-parser.js --config webpack.config.development.js",
-    "build:umd:min": "webpack src/index.js -p dist/react-html-parser.min.js --config webpack.config.production.js",
-    "prerelease": "npm run clean && npm run check",
-    "release": "npm run build",
-    "postrelease": "git push --follow-tags && npm publish",
-    "release:patch": "npm version patch && npm run release",
-    "release:minor": "npm version minor && npm run release",
-    "release:major": "npm version major && npm run release",
-    "demo:clean": "rimraf demo/dist",
-    "demo:build": "cd demo && npm run build",
-    "demo:push": "cd demo/dist && git init && git commit --allow-empty -m 'update demo' && git checkout -b gh-pages && git add . && git commit -am 'update demo' && git push git@github.com:wrakky/react-html-parser gh-pages --force",
-    "demo:publish": "npm run demo:clean && npm run demo:build && npm run demo:push"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wrakky/react-html-parser.git"
-  },
-  "keywords": [
-    "react",
-    "html",
-    "htmlparser",
-    "htmlparser2",
-    "inner html",
-    "dangerouslySetInnerHTML"
+  "_args": [
+    [
+      {
+        "raw": "react-html-parser",
+        "scope": null,
+        "escapedName": "react-html-parser",
+        "name": "react-html-parser",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/jwelfare/Projects/ncsc-portal-admin"
+    ]
   ],
-  "author": "Peter Newnham",
-  "license": "MIT",
+  "_from": "react-html-parser@latest",
+  "_id": "react-html-parser@1.0.3",
+  "_inCache": true,
+  "_location": "/react-html-parser",
+  "_nodeVersion": "5.7.1",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/react-html-parser-1.0.3.tgz_1463358120256_0.04078209772706032"
+  },
+  "_npmUser": {
+    "name": "wrakky",
+    "email": "pete@blarg.co.uk"
+  },
+  "_npmVersion": "3.6.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-html-parser",
+    "scope": null,
+    "escapedName": "react-html-parser",
+    "name": "react-html-parser",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-html-parser/-/react-html-parser-1.0.3.tgz",
+  "_shasum": "28358f0cc11eee3bf490f8ab6c9c31bd2c806790",
+  "_shrinkwrap": null,
+  "_spec": "react-html-parser",
+  "_where": "/Users/jwelfare/Projects/ncsc-portal-admin",
+  "author": {
+    "name": "Peter Newnham"
+  },
+  "bugs": {
+    "url": "https://github.com/wrakky/react-html-parser/issues"
+  },
+  "dependencies": {
+    "htmlparser2": "^3.9.0"
+  },
+  "description": "Parse HTML into React components",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.8.0",
@@ -68,10 +85,60 @@
     "rimraf": "^2.5.2",
     "webpack": "^1.13.0"
   },
-  "dependencies": {
-    "htmlparser2": "^3.9.0"
+  "directories": {},
+  "dist": {
+    "shasum": "28358f0cc11eee3bf490f8ab6c9c31bd2c806790",
+    "tarball": "https://registry.npmjs.org/react-html-parser/-/react-html-parser-1.0.3.tgz"
   },
+  "gitHead": "404ed57361df33dd1990f4b2cfa336e4dfbd96fb",
+  "homepage": "https://github.com/wrakky/react-html-parser#readme",
+  "jsnext:main": "src/index.js",
+  "keywords": [
+    "react",
+    "html",
+    "htmlparser",
+    "htmlparser2",
+    "inner html",
+    "dangerouslySetInnerHTML"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "maintainers": [
+    {
+      "name": "wrakky",
+      "email": "pete@blarg.co.uk"
+    }
+  ],
+  "name": "react-html-parser",
+  "optionalDependencies": {},
   "peerDependencies": {
     "react": "^0.13.0 || ^0.14.0 || ^15.0.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrakky/react-html-parser.git"
+  },
+  "scripts": {
+    "build": "npm run build:lib && npm run build:umd && npm run build:umd:min",
+    "build:lib": "rimraf lib && babel ./src -d lib",
+    "build:umd": "webpack src/index.js dist/react-html-parser.js --config webpack.config.development.js",
+    "build:umd:min": "webpack src/index.js -p dist/react-html-parser.min.js --config webpack.config.production.js",
+    "check": "npm run lint && npm run test",
+    "clean": "rimraf coverage dist lib",
+    "demo:build": "cd demo && npm run build",
+    "demo:clean": "rimraf demo/dist",
+    "demo:publish": "npm run demo:clean && npm run demo:build && npm run demo:push",
+    "demo:push": "cd demo/dist && git init && git commit --allow-empty -m 'update demo' && git checkout -b gh-pages && git add . && git commit -am 'update demo' && git push git@github.com:wrakky/react-html-parser gh-pages --force",
+    "lint": "eslint src test demo/src",
+    "postrelease": "git push --follow-tags && npm publish",
+    "prerelease": "npm run clean && npm run check",
+    "release": "npm run build",
+    "release:major": "npm version major && npm run release",
+    "release:minor": "npm version minor && npm run release",
+    "release:patch": "npm version patch && npm run release",
+    "test": "karma start --single-run",
+    "test:watch": "karma start"
+  },
+  "version": "1.0.3"
 }
